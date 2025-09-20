@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY trae/ ./trae/
+COPY run_trae_tests.py .
+
+RUN pip install pyyaml
+
+CMD ["python", "run_trae_tests.py"]

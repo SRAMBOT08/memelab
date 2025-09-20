@@ -1,0 +1,8 @@
+services:
+  trae-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.tests
+    volumes:
+      - ./trae:/app/trae
+      - ./run_trae_tests.py:/app/run_trae_tests.py
